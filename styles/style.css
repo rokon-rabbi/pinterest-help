@@ -1,7 +1,8 @@
 
 *{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family:  sans-serif;
 }
 
@@ -18,8 +19,9 @@
 .navsec-3{
     grid-area: nav-last;
   }
+
 nav{
-    position: sticky;
+    position: fixed;
     background-color: #D7EDFF;
     padding: 1.5%;
     display: grid;
@@ -37,7 +39,7 @@ nav a{
 .logo-section {
     display:flex;
     align-items: center;
-    margin-left: 14%;
+    margin-left: 50%;
     gap:2%;
 }
 .navsec-3{
@@ -45,18 +47,25 @@ nav a{
     align-items: center;
     gap: 5%;
 }
+.login-signup{
+    cursor: pointer;
+}
 .logo{
     padding: 5px;
     color:#003C96;
-    font-size: 160%;
+    font-size: 80%;
 }
+.fa-brands:hover{
+    color: #007CFF;
+}
+
 .login-signup{
     border-radius: 40px;
     padding: 0.5vw;
     border: 2px solid #003C96;
 }
 .search-icon{
-    font-size: 150%;
+    font-size: 70%;
    
 }
 .login-signup:hover{
@@ -71,14 +80,15 @@ nav a{
 /* nav css end  */
 /* header section  */
 .header-search{
-    margin-top: 10%;
+    height: 100%;
+    /* margin-top: 10%; */
    text-align: center;
   
 }
 .header-search p{
-    font-size: 500%;
+    font-size: 200%;
     color: #003C96;
-   
+    padding-top: 15%;
  }
 input[type="text"] {
     border-radius: 50px;
@@ -88,27 +98,57 @@ input[type="text"] {
   	font-size: 1rem;
   	border: 1px solid gray;
 }
-
+.header-content p , i{
+font-size: 200%;
+color: #003C96;
+}
 .get-started{
-
+    grid-area: get-started;
 }
 .manage-account{
-
+    grid-area: manage-account;
 }
 .find-save{
-
+    grid-area: find-save;
 }
 .create-edit{
-
+    grid-area: create-edit;
 }
 .connect{
-    
+    grid-area: connect;
 }
 .Privacy{
-    
+    grid-area: privacy;
 }
 .header-content{
-display: grid;
+    margin-left: 5%;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: 
+    "get-started manage-account find-save"
+    "create-edit connect privacy"
+    ;
+    row-gap: 10%;
+}
+.header-content a{
+    display: block;
+    cursor: pointer;
+    color: #003C96;
+    padding-top:10% ;
+   
+}
+.header-content a :hover{
+   color:#007CFF;
+   background-color: black;
+   
+}
+a:hover{
+    color:#007CFF;
+    text-decoration: underline;
+}
+.feature-article{
+    height: 100%;
 }
 @media only screen and (max-width: 576px) {
     nav{
@@ -123,8 +163,9 @@ display: grid;
         ;
     }
     .bar{
-        display: block;
-        margin-left: 50%;
+        display: flex;
+        gap: 5px;
+        margin-left: 90%;
     }
     .navsec-3{
         display:none;
@@ -142,5 +183,27 @@ display: grid;
         align-items: center;
      margin: 0;
         gap:2%;
+    }
+    .header-search p{
+        font-size: 120%;
+        color: #003C96;
+        padding-top: 25%;
+     }
+     input[type="text"] {
+        border-radius: 50px;
+        width: 80%;
+          height: 50px;
+          padding: 3px;
+          font-size: 0.8rem;
+          border: 1px solid gray;
+    }
+    .header-content{
+        margin-left: 5%;
+        margin-top: 10%;
+        display: block;
+      
+    }
+    .header-content div{
+        padding-top: 30px;
     }
   }
