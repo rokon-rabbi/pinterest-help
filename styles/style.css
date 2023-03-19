@@ -1,0 +1,146 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family:  sans-serif;
+}
+
+/* nav css start from here  */
+.logo-section {
+    grid-area: logo;
+  }
+.navsec-2{
+    display:flex;
+    gap:5%;
+    grid-area: nav-middle;
+
+  }
+.navsec-3{
+    grid-area: nav-last;
+  }
+nav{
+    position: sticky;
+    background-color: #D7EDFF;
+    padding: 1.5%;
+    display: grid;
+    color: #003C96;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+    "logo logo logo logo nav-middle nav-middle nav-middle nav-middle nav-last nav-last nav-last nav-last"
+    ;
+    align-items: center;
+}
+nav a{
+    cursor: pointer;
+}
+
+.logo-section {
+    display:flex;
+    align-items: center;
+    margin-left: 14%;
+    gap:2%;
+}
+.navsec-3{
+    display:flex;
+    align-items: center;
+    gap: 5%;
+}
+.logo{
+    padding: 5px;
+    color:#003C96;
+    font-size: 160%;
+}
+.login-signup{
+    border-radius: 40px;
+    padding: 0.5vw;
+    border: 2px solid #003C96;
+}
+.search-icon{
+    font-size: 150%;
+   
+}
+.login-signup:hover{
+    background-color: #003C96;
+    color:#ffff;
+}
+.bar{
+    display: flex;
+    align-items: center;
+    display: none;
+}
+/* nav css end  */
+/* header section  */
+.header-search{
+    margin-top: 10%;
+   text-align: center;
+  
+}
+.header-search p{
+    font-size: 500%;
+    color: #003C96;
+   
+ }
+input[type="text"] {
+    border-radius: 50px;
+	width: 40vw;
+  	height: 45px;
+  	padding: 3px;
+  	font-size: 1rem;
+  	border: 1px solid gray;
+}
+
+.get-started{
+
+}
+.manage-account{
+
+}
+.find-save{
+
+}
+.create-edit{
+
+}
+.connect{
+    
+}
+.Privacy{
+    
+}
+.header-content{
+display: grid;
+}
+@media only screen and (max-width: 576px) {
+    nav{
+        background-color: #D7EDFF;
+        padding: 2%;
+        display: grid;
+        color: #003C96;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        "logo logo logo logo logo logo"
+        "nav-middle nav-middle nav-middle nav-middle nav-middle nav-middle"
+        ;
+    }
+    .bar{
+        display: block;
+        margin-left: 50%;
+    }
+    .navsec-3{
+        display:none;
+        
+    }
+    .search-icon{
+        font-size: 120%;
+       
+    }
+    .navsec-2{
+        margin-left: 100px;
+      }
+      .logo-section {
+        display:flex;
+        align-items: center;
+     margin: 0;
+        gap:2%;
+    }
+  }
