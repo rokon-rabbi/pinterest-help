@@ -123,6 +123,7 @@ color: #003C96;
 .header-content{
     margin-left: 5%;
     margin-top: 5%;
+    padding-bottom:10% ;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
@@ -148,7 +149,13 @@ a:hover{
     text-decoration: underline;
 }
 .feature-article{
-    height: 100%;
+    height: 400px;
+    background-color: #007CFF;
+    text-align: center;
+    font-size: 400%;
+}
+.feature-article p{
+    margin-top: 10%;
 }
 @media only screen and (max-width: 576px) {
     nav{
